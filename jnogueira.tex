@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{tabularx}
+\usepackage{lmodern,textcomp}
+\usepackage[hidelinks]{hyperref}
+\usepackage[sfdefault]{roboto}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{0E4D92}
+\definecolor{SlateGrey}{HTML}{4682B4}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{João Nogueira}
+\tagline{}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{foto_square.png}
+\personalinfo{%
+  \email{\href{mailto:joaopbnogueira@gmail.com}{joaopbnogueira@gmail.com}}  
+  \phone{\href{tel:+351962924365}{+351 962924365}}
+  \linkedin{\href{https://www.linkedin.com/in/joaopbnogueira/}{linkedin.com/in/joaopbnogueira}}
+  \skype{\href{skype:joao.p.nogueira}{joao.p.nogueira}}
+  
+%  \email{--------------- }  
+%  \phone{---------------}
+%  \linkedin{linkedin.com/in/joaopbnogueira}
+%  \skype{---------------}
+%  
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[jnogueira-p1sidebar]{Key Expertise}
+
+\begin{tabularx}{\linewidth}{X X}
+	• Large-scale systems         & • International projects     \\
+	• Multiple program. languages & • Agile Scrum teams          \\
+	• Clean code, tests, CI/CD    & • Autonomous and self-driven
+\end{tabularx}
+
+\cvsection{Industry Experience}
+
+\cvevent{Senior Full Stack Developer}{\href{https://www.bosch.com/}{Bosch Thermotechnology}}{}{Aug 2017 -- Present}{Aveiro, Portugal}
+\begin{itemize}
+	\item \textbf{Deployment and operation of Azure cloud services} in a \textbf{Continuous Integration / Continuous Deployment} fashion
+	\item Cross-functional development, in \textbf{backend and frontend code},  working in \textbf{Agile Scrum} supporting the \textbf{international team} on everything that might be needed to push the project forward
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer (Research \& Development)}{\href{http://www.alticelabs.com/}{Altice Labs}}{Formerly Portugal Telecom Inovação}{Jun 2012 -- Aug 2017}{Aveiro, Portugal}
+\begin{itemize}
+	\item Major contributions to \href{https://www.meo.pt/tv}{MEO IPTV} \textbf{large scale production services}, defining their \textbf{architecture and key algorithms} to ensure \textbf{performance and scalability} goals -- e.g. lead developer \& architect of MEO Gravações Automáticas, with more than 1 million users every month
+	\item Development and curation of reusable libraries / components in order to speedup new applications development, reduce production bugs, and \textbf{promote clean code and good programming practices}
+	\item \textbf{Planning, management, and coordination responsibilities in large national \& international projects} -- e.g. \href{http://www.alticelabs.com/gapott/}{Celtic-Plus NOTTS} (8.5 Million € budget on 6 different countries) and \href{http://www.alticelabs.com/site/ultratv/}{Ultra TV}
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer (Trainee Internship)}{\href{http://www.alticelabs.com/}{Altice Labs}}{Formerly Portugal Telecom Inovação}{Aug 2010 -- Sep 2011}{Aveiro, Portugal}
+
+\begin{itemize}
+\item Successfully designed \& developed a Network / Cloud DVR product, \textbf{working autonomously} and proposing novel solutions to its significant technical challenges on client and server implementations
+\end{itemize}
+
+\cvsection{Tech Stack}
+
+\cvtag{C\#} \cvtag{.Net (Core)} \cvtag{MVVM} \cvtag{MVC} 
+\cvtag{WebApi} \cvtag{REST} \cvtag{IIS} \cvtag{Swagger}
+\cvtag{SQL}\cvtag{OData} \cvtag{Azure} \cvtag{Autofac} \cvtag{Moq} \cvtag{Serilog}
+\cvtag{Entity Framework}  \cvtag{Mediaroom} \cvtag{IPTV} \cvtag{WCF} \cvtag{OTT} \cvtag{Smooth Streaming} \cvtag{HLS} \cvtag{MPEG-DASH} \cvtag{Git} \cvtag{Svn} \cvtag{JIRA}
+
+\divider
+Also worked with: \\
+\cvtag{React} \cvtag{Angular} \cvtag{jQuery}  \cvtag{Javascript} \cvtag{C++} \cvtag{C} \cvtag{Java}
+\cvtag{R} \cvtag{Python} \cvtag{C++} \cvtag{C} \cvtag{Java} \cvtag{Machine Learning} \cvtag{Big Data} \cvtag{RStudio}
+\cvtag{CDNs} \cvtag{Apache Traffic Server} \cvtag{Nginx} \cvtag{Varnish}
+
+%\clearpage
+%
+%\cvsection[page2sidebar]{Publications}
+%
+%\nocite{*}
+%
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%
+%\divider
+%
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+%
+%\divider
+%
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
