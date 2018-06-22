@@ -45,6 +45,8 @@
 \usepackage{lmodern,textcomp}
 \usepackage[hidelinks]{hyperref}
 \usepackage[sfdefault]{roboto}
+\usepackage{academicons}
+\usepackage{setspace}
 
 % If using xelatex or lualatex:
 % \setmainfont{Lato}
@@ -63,25 +65,25 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
-
 \begin{document}
 \name{João Nogueira}
 \tagline{}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 \photo{2.5cm}{foto_square.png}
 \personalinfo{%
-  \email{\href{mailto:joaopbnogueira@gmail.com}{joaopbnogueira@gmail.com}}  
-  \phone{\href{tel:+351962924365}{+351 962924365}}
-  \linkedin{\href{https://www.linkedin.com/in/joaopbnogueira/}{linkedin.com/in/joaopbnogueira}}
-  \skype{\href{skype:joao.p.nogueira}{joao.p.nogueira}}
-  
-%  \email{--------------- }  
-%  \phone{---------------}
-%  \linkedin{linkedin.com/in/joaopbnogueira}
-%  \skype{---------------}
-%  
+	\begin{spacing}{1.5}
+		\birthday{30/03/1987}
+		\location{\href{https://www.google.com/maps/@?api=1\&map\_action=map\&center=40.6408378\%2C-8.641316\&zoom=10}{Aveiro, Portugal}}
+		\email{\href{mailto:joaopbnogueira@gmail.com}{joaopbnogueira@gmail.com}}  
+		\phone{\href{tel:+351962924365}{+351 962924365}}
+		\skype{\href{skype:joao.p.nogueira}{joao.p.nogueira}}
+		\linkedin{\href{https://www.linkedin.com/in/joaopbnogueira/}{linkedin.com/in/joaopbnogueira}}
+		\orcid{\href{https://orcid.org/0000-0002-5748-833X}{orcid.org/0000-0002-5748-833X}}
+	%  \email{--------------- }  
+	%  \phone{---------------}
+	%  \linkedin{linkedin.com/in/joaopbnogueira}
+	%  \skype{---------------}
+	\end{spacing}
 }
 
 %% Make the header extend all the way to the right, if you want.
@@ -93,7 +95,7 @@
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[jnogueira-p1sidebar]{Key Expertise}
+\cvsection[p1sidebar]{Key Expertise}
 
 \begin{tabularx}{\linewidth}{X X}
 	• Large-scale systems         & • International projects     \\
@@ -126,7 +128,9 @@
 \item Successfully designed \& developed a Network / Cloud DVR product, \textbf{working autonomously} and proposing novel solutions to its significant technical challenges on client and server implementations
 \end{itemize}
 
-\cvsection{Tech Stack}
+\clearpage
+
+\cvsection[p2sidebar]{Tech Stack}
 
 \cvtag{C\#} \cvtag{.Net (Core)} \cvtag{MVVM} \cvtag{MVC} 
 \cvtag{WebApi} \cvtag{REST} \cvtag{IIS} \cvtag{Swagger}
@@ -139,9 +143,6 @@ Also worked with: \\
 \cvtag{R} \cvtag{Python} \cvtag{C++} \cvtag{C} \cvtag{Java} \cvtag{Machine Learning} \cvtag{Big Data} \cvtag{RStudio}
 \cvtag{CDNs} \cvtag{Apache Traffic Server} \cvtag{Nginx} \cvtag{Varnish}
 
-%\clearpage
-%
-%\cvsection[page2sidebar]{Publications}
 %
 %\nocite{*}
 %
