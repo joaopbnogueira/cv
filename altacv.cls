@@ -123,7 +123,7 @@
 \newcommand{\cvsection}[2][]{%
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-  {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
+  \ifstrequal{#2}{}{}{{\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]}%    
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }
 
@@ -137,7 +137,7 @@
   \smallskip
   \textbf{\color{accent}#2}\ifstrequal{#3}{}{}{\hspace{0.5em}{\color{accent}(#3)}}\par
   \smallskip
-  {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#4}%
+  {\small\ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#4}}%
   \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#5}}\par}
   \medskip
 }
@@ -148,7 +148,7 @@
   \textbf{\color{accent}#2}\par
   \smallskip
   {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
-  \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{(#4)}}\par}
+  \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\hfill(#4)}}\par}
   \medskip
 }
 
@@ -169,6 +169,14 @@
 \textcolor{emphasis}{\textbf{#1}}\hfill
 \foreach \x in {1,...,5}{%
   \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
+}
+
+\newcommand{\cvpub}[3]{%
+	{\large\color{emphasis}#1\par}
+	\smallskip
+	{\color{accent}#2}\par
+	\ifstrequal{#3}{}{}{#3}\par
+	\smallskip
 }
 
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
